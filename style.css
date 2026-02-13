@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+
+  font-family: sans-serif;
+  font-size: 10pt;
+  line-height: 13pt;
+  color: blueviolet;
+}
+
+h1 {
+  text-align: right;
+  margin-right: 10px;
+  margin-top: 20px;
+  font-size: 11pt;
+  color: rgb(181, 197, 120);
+}
+
+table {
+  margin-top: 40px;
+  margin-left: 20px;
+  text-align: left;
+  table-layout: fixed;
+}
+
+table, tr, td, th {
+  border: 1px solid rgb(181, 197, 120);
+  border-collapse: collapse;
+
+}
+
+th {
+  font-weight: bold;
+}
+
+li {
+  text-align: right;
+
+}
+
+.img-cell img {
+  width: 100px;
+  height: 100px;
+  display: block;
+  object-fit: cover;
+  filter: grayscale(100%) blur(2px);
+
+}
+
+.img-cell img:hover {
+  filter: none;
+}
+
+table th,
+table td {
+  width: 100px;
+  padding-left: 2px;
+  text-align: left;
+  vertical-align: top;
+}
+
+table thead th {
+  height: 15px;
+}
+
+tbody tr:first-child td {
+  height: 12px;
+  font-size: 8pt;
+  line-height: 10px;
+  padding-top: 1px;
+}
+
+tbody tr:nth-child(n + 2) td {
+  height: 100px;
+}
+
+.img-cell {
+  text-align: center;
+  vertical-align: middle;
+  padding-left: 0;
+}
+
+
+
+footer {
+  font-size: 9pt;
+  margin-left: 20px;
+  text-align: left;
+}
+
+@media screen and (max-width: 704px) {
+
+}
+
+/* question and answer */
+
+
+.question {
+  float: left;
+  width: 150px;
+}
+
+ol {
+  margin-right: 10px;
+  list-style: none;
+}
+
+.question a:visited {
+  color: blueviolet;
+}
+
+.answer {
+  margin-left: 150px;
+  padding: 20px;
+  border-left: 1px solid rgb(181, 197, 120);
+}
+
+.question,
+.answer {
+  min-height: 100vh;
+
+}
+
+.content {
+  display: none;
+  /* overflow-y:auto;*/
+}
+
+.content:target {
+  display: block;
+}
