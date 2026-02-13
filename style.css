@@ -122,6 +122,10 @@ ol {
   list-style: none;
 }
 
+.question a {
+  color: blueviolet;
+}
+
 .question a:visited {
   color: blueviolet;
 }
