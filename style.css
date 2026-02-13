@@ -60,12 +60,12 @@ li {
   filter: none;
 }
 
-.bael {
-  display: none;
+td span.bael {
+  display: none !important;
 }
 
-td:hover .bael {
-  display: inline;
+td:hover span.bael {
+  display: inline !important;
 }
 
 table th,
