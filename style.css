@@ -4,6 +4,28 @@
   box-sizing: border-box;
 }
 
+/* ASCII 서점 외관 */
+.ascii-store {
+  background: linear-gradient(180deg, #2a2a1a 0%, #1a2520 100%);
+  padding: 1.2rem 0.8rem;
+  margin-bottom: 1.5rem;
+  overflow-x: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.ascii-store pre {
+  font-family: "SF Mono", "Monaco", "Consolas", "Menlo", monospace;
+  font-size: clamp(9px, 1.4vw, 12px);
+  line-height: 1.35;
+  color: #c4b896;
+  margin: 0;
+  white-space: pre;
+  letter-spacing: 0.02em;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -60,6 +82,36 @@ li {
   filter: none;
 }
 
+
+.img-cell {
+  text-align: center;
+  vertical-align: middle;
+  padding-left: 0;
+}
+
+/* 2월 22일: 흑백일 때만 이미지 위 중앙에 birthday 표시 */
+.birthday-cell {
+  position: relative;
+}
+
+.birthday-cell .birthday-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8pt;
+  color:rgb(181, 197, 120);
+
+  z-index: 1;
+  pointer-events: none;
+}
+
+.birthday-cell:hover .birthday-label {
+  visibility: hidden;
+}
+
+
+
 td span.bael {
   display: none !important;
 }
@@ -91,13 +143,6 @@ tbody tr:nth-child(n + 2) td {
   height: 100px;
 }
 
-.img-cell {
-  text-align: center;
-  vertical-align: middle;
-  padding-left: 0;
-}
-
-
 
 footer {
   font-size: 9pt;
@@ -105,9 +150,7 @@ footer {
   text-align: left;
 }
 
-@media screen and (max-width: 704px) {
 
-}
 
 /* question and answer */
 
@@ -149,4 +192,23 @@ ol {
 
 .content:target {
   display: block;
+}
+
+p {
+  display: none;
+}
+
+
+@media screen and (max-width: 600px) {
+
+  table {
+      display: none;
+  }
+  footer {
+    display: none;
+  }
+  p {
+    display: block;
+  }
+
 }
